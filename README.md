@@ -1,2 +1,2 @@
-# Python-threading
-Tutorial codes for Python threading module.
+# Python
+Tutorial codes for Python.
