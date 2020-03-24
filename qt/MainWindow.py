@@ -7,8 +7,8 @@ class Window(QMainWindow):
         super().__init__()
         
         self.title = "Hello World!"
-        self.top = 100
-        self.left = 100
+        self.top = 500
+        self.left = 500
         self.width = 400
         self.height = 300
         self.InitWindow()
@@ -16,7 +16,7 @@ class Window(QMainWindow):
     def InitWindow(self):
         self.setWindowIcon(QtGui.QIcon("face.png"))
         self.setWindowTitle(self.title)
-        self.setGeometry(self.left, self.top, self.width, self.height)
+        self.setGeometry(self.left, self.top, self.width, self.height)#set the window position and size
         self.show()
         
 App = QApplication(sys.argv)
