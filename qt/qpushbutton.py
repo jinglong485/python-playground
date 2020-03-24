@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
 import sys
 from PyQt5 import QtGui
 from PyQt5.QtCore import QRect
+from PyQt5 import QtCore
 
 class Window(QMainWindow):
     def __init__(self):
@@ -26,7 +27,9 @@ class Window(QMainWindow):
         button = QPushButton("Don't Click Me!",self)
         #button.move(50,50)
         button.setGeometry(QRect(50,100,150,50))#left,top,width,height
-        button.setWindowIcon(QtGui.QIcon('face.png'))
+        button.setIcon(QtGui.QIcon('face.png'))
+        button.setIconSize(QtCore.QSize(30,30))
+        button.setToolTip("You will click it anyway.")
 if __name__ == "__main__":
     App = QApplication(sys.argv)
     window = Window()
