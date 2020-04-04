@@ -11,9 +11,9 @@ class Window(QDialog):
 		self.title = "QRadio"
 		self.left = 200
 		self.top = 200
-		self.width = 500
-		self.height = 600
-		self.iconName = "icon.png"
+		self.width = 200
+		self.height = 80
+		self.iconName = "face.png"
 		self.initWindow()
 		
 	def initWindow(self):
