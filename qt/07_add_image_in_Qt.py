@@ -20,7 +20,7 @@ class Window(QDialog):
 		self.setGeometry(self.left, self.top, self.width, self.height)
 		vbox = QVBoxLayout()
 		labelImage = QLabel("What is this for?")
-		pixmap = QPixmap("cat.JPG")
+		pixmap = QPixmap("cat.jpg")
 		labelImage.setPixmap(pixmap)
 		labelImage.setMargin(0)
 		labelImage.setScaledContents(True)
