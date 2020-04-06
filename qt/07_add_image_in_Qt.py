@@ -23,6 +23,7 @@ class Window(QDialog):
 		pixmap = QPixmap("cat.JPG")
 		labelImage.setPixmap(pixmap)
 		labelImage.setMargin(0)
+		labelImage.setScaledContents(True)
 		vbox.addWidget(labelImage)
 		self.setLayout(vbox)
 		self.show()
