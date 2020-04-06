@@ -2,12 +2,13 @@ from PyQt5 import QtGui
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QLabel, QFrame, QSlider, QHBoxLayout, QVBoxLayout, QWidget, QGroupBox
 import sys
+import os
 from PyQt5.QtCore import Qt
 
 
 class Window(QWidget):
     
-    def __init__(self):
+    def __init__(self,filePath = "./"):
         super().__init__()
         self.title = "slider"
         self.left = 200
@@ -17,7 +18,7 @@ class Window(QWidget):
         self.iconName = "face.png"
         self.setWindowTitle(self.title)
         self.setWindowIcon(QtGui.QIcon(self.iconName))
-        self.setGeometry(self.left, self.top, self.width, self.height)
+        #self.setGeometry(self.left, self.top, self.width, self.height)
         vbox = QVBoxLayout()
         hbox = QHBoxLayout()
         self.slider1 = QSlider()
@@ -57,7 +58,7 @@ class Window(QWidget):
         self.slider4.valueChanged.connect(self.changeSize)
         self.labelPicture = QLabel()
         self.labelPicture.setScaledContents(True)
-        self.pixmap = QPixmap("./cat.jpg")
+        self.pixmap = QPixmap(filePath+"\\cat.jpg")
         self.pixmapChanged = QPixmap()
         self.labelPicture.setPixmap(self.pixmap)
         groupBoxLower = QGroupBox("Cat")
@@ -96,6 +97,10 @@ class Window(QWidget):
         
         
 if __name__ == "__main__":
+    try:
+        wd = sys._MEIPASS
+    except AttributeError:
+        wd = os.getcwd()
     app = QApplication(sys.argv)
-    window = Window()
+    window = Window(wd)
     sys.exit(app.exec())
