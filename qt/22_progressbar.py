@@ -7,7 +7,7 @@ import time
 class MyThread(QThread):
     change_value = pyqtSignal(int)
     
-    def start(self):
+    def run(self):
         cnt = 0
         while cnt < 100:
             cnt+=1
