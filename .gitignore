@@ -292,3 +292,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#hdf5 files
+*.h5
